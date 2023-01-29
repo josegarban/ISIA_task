@@ -66,4 +66,17 @@ public class Matriz {
         return ret;
     }
     
+    /* @author garban1 */
+    public static Matriz invertirMatriz(Matriz b) { 
+        int i, j, filasB, columnasB; 
+        filasB = b.getDimension().height; 
+        columnasB = b.getDimension().width; 
+        Matriz matrizResultante = new Matriz(columnasB, filasB, false);
+        for (i = 0; i < filasB; i++) { 
+            for (j = 0; j < columnasB; j++) { 
+                matrizResultante.datos[i][j] += b.datos[j][i]; 
+            } 
+        } 
+        return matrizResultante; 
+    } 
 }
