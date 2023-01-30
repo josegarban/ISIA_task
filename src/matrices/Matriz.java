@@ -14,7 +14,7 @@ import java.util.Random;
  * @author galvez
  */
 public class Matriz {
-    private int[][]datos;
+    int[][]datos;
     private Random rnd = new Random();
     
     public Matriz(int filas, int columnas, boolean inicializarAleatorio){
@@ -82,7 +82,6 @@ public class Matriz {
     
     /* @author garban2 */
     public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
-        //System.out.println("Dimensiones de las matrices: Matriz a mide "+ a.getDimension() + "; matriz b mide " + b.getDimension() );        
         int i, j, k, filasA, filasB, columnasA, columnasB; 
         filasA = a.getDimension().width; 
         filasB = b.getDimension().width; 
